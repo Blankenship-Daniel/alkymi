@@ -1,0 +1,16 @@
+.TableRow {
+  border-top: 1px solid var(--main-bg-color);
+  min-height: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .TableRow .row {
+    display: block;
+    height: auto;
+    padding: 12px;
+  }
+
+  .TableRow .errorRow {
+    display: none;
+  }
+}

@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Alkymi Take Home Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Details on implementation are listed below. This project was created with `createReactApp`. So, the following commands can validated all of the scenarios listed below.
+1. `npm install`
+2. `npm start`
+3. `npm test`
+## Tasks
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [X] Implement the requirements and design layout above as a React application.
+- [X] Architecture can be webpack/babel/React or spun from createReactApp.
+TypeScript is optional.
+  - createReactApp was used to generate this project
+- [X] Raw CSS or Module SASS/SCSS should be used for styling. Styled-components
+are disallowed.
+  - CSS is used for styling
+- [X] The layout should be responsive but does not need to be pixel perfect.
+  - I utilized media queries to be able create a mobile view of the table
+- [X] Request and store the data from API.
+- [X] Utilize Redux/ReduxToolkit for stateful storage
+  - I used the ReduxToolKit to request the data from the API. I also updated the cache directly to simulate the user being able to remove rows from the table (this would make an actual PUT request in a real scenario)
+- [X] JSON output should be fetched from a mock backend endpoint: GET https://private-39e16-alkymiexercise.apiary-mock.com/list
+- [X] Add a feature that you think would improve the user experience.
+  - I added an example of displaying the error to the end user in the table
+  - The inputs in the table are being updated by the type field dynamically
+     - For example, if the response defines the type as `date`, it will define the input as that type in the DOM
+  - I transform the response so that the `results` has access to the `fields` data. This allows me to be able to use these labels in the mobile view
+- [X] Include Documentation or a ReadMe (You're Here!)
+- [X] Write one or more tests demonstrating how your application would be tested (Jest with
+either react-test-renderer and/or React TestingLibrary).
+  - I ran short on time, but I decided to test the `TableCell` component
+    - Tests to make sure that a cell with a `validation_error` renders the component in an error state
+    - Tests to make sure that error state is removed if a correct date is entered
+    - Tests to make sure `readonly` cells are rendered correctly. i.e. not contained in an `input`

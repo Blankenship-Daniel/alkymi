@@ -1,0 +1,10 @@
+.Table {
+  background: var(--card-bg-color);
+  border-radius: var(--card-border-radius);
+}
+
+@media screen and (max-width: 1024px) {
+  .Table .header {
+    display: none;
+  }
+}

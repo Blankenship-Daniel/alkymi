@@ -1,0 +1,32 @@
+.Dashboard {
+    margin: 36px 48px;
+}
+
+.RemoveBtn {
+    margin-bottom: 12px;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: var(--main-btn-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+.RemoveBtn:hover {
+    background: var(--main-btn-color-hover);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    height: 76px;
+    background: var(--header-bg-color);
+}
+
+header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
