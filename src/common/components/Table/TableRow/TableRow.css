@@ -3,11 +3,22 @@
   min-height: 48px;
 }
 
+.TableRow .name {
+  font-weight: bold;
+}
+
+.TableRow .row:first-child {
+  padding: 12px;
+}
+
+.TableRow .row:last-child {
+  padding-bottom: 6px;
+}
+
 @media screen and (max-width: 1024px) {
   .TableRow .row {
     display: block;
     height: auto;
-    padding: 12px;
   }
 
   .TableRow .errorRow {

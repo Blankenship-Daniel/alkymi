@@ -3,8 +3,9 @@
   --main-text-color: #424242;
   --main-btn-color: #BBDEFB;
   --main-btn-color-hover: #90CAF9;
+  --checkbox-checked: #2196F3;
   --card-bg-color: #fafafa;
-  --card-border-radius: 6px;
+  --main-border-radius: 6px;
   --error-bg-color: #ffcdd2;
   --error-text-color: #f44336;
   --header-bg-color: #FFEBEE;
@@ -21,21 +22,37 @@ body {
   color: var(--main-text-color);
 }
 
+input {
+  padding: 12px;
+  border: 1px solid var(--main-bg-color);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: var(--main-border-radius);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--checkbox-checked);
+  padding: 6px;
+}
+
 .errorText {
   color: var(--error-text-color);
   font-size: 12px;
   line-height: 1.5;
 }
 
-input {
-  padding: 12px;
-  border: 1px solid var(--main-bg-color);
-}
-
 .row {
   display: flex;
   align-items: center;
-  padding: 12px;
 }
 
 .row * {

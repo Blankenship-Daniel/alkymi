@@ -25,7 +25,7 @@ const TableRow: FunctionComponent<ITableRowProps> = ({ onChange, rowData }) => {
             type="checkbox"
           />
         </div>
-        <div>
+        <div className="name">
           <TableCell
             cellData={{
               text: name,
@@ -34,7 +34,7 @@ const TableRow: FunctionComponent<ITableRowProps> = ({ onChange, rowData }) => {
             }}
           />
         </div>
-        <div>
+        <div className="date">
           <TableCell
             cellData={{
               text: new Date(created).toLocaleDateString("en-us", {
@@ -51,22 +51,27 @@ const TableRow: FunctionComponent<ITableRowProps> = ({ onChange, rowData }) => {
           <TableCell cellData={fund_name} />
         </div>
         <div>
-          <TableCell cellData={due_date} onError={(error: string) => {
-            setDueDateError(error);
-          }} />
+          <TableCell
+            cellData={due_date}
+            onError={(error: string) => {
+              setDueDateError(error);
+            }}
+          />
         </div>
         <div>
           <TableCell cellData={price} />
         </div>
       </div>
-      <div className="row errorText errorRow">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>{dueDateError}</div>
-        <div></div>
-      </div>
+      {dueDateError && (
+        <div className="row errorText errorRow">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div>{dueDateError}</div>
+          <div></div>
+        </div>
+      )}
     </div>
   );
 };

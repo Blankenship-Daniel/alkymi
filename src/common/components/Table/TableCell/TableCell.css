@@ -14,12 +14,21 @@
 @media screen and (max-width: 1024px) {
   .TableCell {
     display: flex;
-    flex-direction: row-reverse;
     padding: 12px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .TableCell label,
   .TableCell .cellError {
     display: block;
+  }
+
+  .TableCell .cellError {
+    padding-top: 6px;
+  }
+
+  .TableCell input {
+    width: 65%;
   }
 }

@@ -37,20 +37,29 @@ const TableCell: FunctionComponent<ITableCellProps> = ({
         <div data-testid="readonly">{text}</div>
       ) : (
         <>
-          <input
-            data-testid="cellInput"
-            id={name}
-            type={type}
-            value={cellVal}
-            onChange={onCellChange}
-            className={error !== "" ? "error" : ""}
-          />
-          <div data-testid="cellErrorMessage" className="cellError errorText">{error}</div>
+          <label data-testid="cellLabel" className="cellLabel" htmlFor={name}>
+            {name}
+          </label>
+          <div>
+            <input
+              data-testid="cellInput"
+              id={name}
+              type={type}
+              value={cellVal}
+              onChange={onCellChange}
+              className={error !== "" ? "error" : ""}
+            />
+            {error !== "" && (
+              <div
+                data-testid="cellErrorMessage"
+                className="cellError errorText"
+              >
+                {error}
+              </div>
+            )}
+          </div>
         </>
       )}
-      <label data-testid="cellLabel" className="cellLabel" htmlFor={name}>
-        {name}
-      </label>
     </div>
   );
 };
