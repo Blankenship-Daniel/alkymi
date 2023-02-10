@@ -5,7 +5,7 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   const queryData = useGetTableDataQuery();
-  const [updateTableData, mutationResult] = useUpdateTableDataMutation();
+  const [updateTableData] = useUpdateTableDataMutation();
   const { data, error, isLoading } = queryData;
   const [selectedRecords, setSelectedRecords] = useState<string[]>([]);
 
@@ -14,8 +14,7 @@ const Dashboard = () => {
   };
 
   const removeRecords = async () => {    
-    const result = await updateTableData({ selectedRecords });
-    console.log("result", result);
+    await updateTableData({ selectedRecords });
   };
 
   return (

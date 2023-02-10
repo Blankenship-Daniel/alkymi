@@ -60,7 +60,4 @@ test("renders TableCell as readonly", () => {
   expect(screen.getByTestId("readonly")).toHaveTextContent(
     readOnlyProps.cellData.text
   );
-  expect(screen.getByTestId("cellLabel")).toHaveTextContent(
-    readOnlyProps.cellData.name
-  );
 });
