@@ -1,6 +1,6 @@
 # Alkymi Take Home Project
 
-Details on implementation are listed below. This project was created with `createReactApp`. So, the following commands can validated all of the scenarios listed below.
+Details on implementation are listed below. This project was created with `createReactApp`. So, the following commands can be used to validate all of the scenarios listed below.
 1. `npm install`
 2. `npm start`
 3. `npm test`
