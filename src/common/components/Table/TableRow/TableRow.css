@@ -24,4 +24,9 @@
   .TableRow .errorRow {
     display: none;
   }
+
+  .TableRow .checkbox {
+    display: flex;
+    justify-content: center;
+  }
 }
